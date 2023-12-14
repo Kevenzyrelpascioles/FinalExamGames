@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Game Title</title>
+  <style>
+    /* Add any additional styles here */
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script>
+    // Enemy Object Definition
+var Enemy = function () {
+  this.width = 40; // Width of the enemy
+  this.height = 40; // Height of the enemy
+  this.color = "#FF0000"; // Color of the enemy
+  this.speed = 5; // Speed of the enemy
+  this.position = { x: 0, y: 0 }; // Initial position of the enemy
+
+  // Method to update the enemy's position
+  this.update = function () {
+    // Implement enemy movement logic here based on the game's requirements
+    // For simplicity, we'll make the enemy move horizontally
+
+    this.position.x += this.speed;
+
+    // Reset the enemy to the left side of the screen when it goes out of bounds
+    if (this.position.x > canvas.width) {
+      this.position.x = -this.width;
+    }
+  };
+
+  // Method to render the enemy on the canvas
+  this.render = function (ctx) {
+    // Implement rendering logic here (e.g., drawing a basic rectangle)
+    ctx.fillStyle = this.color;
+    ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+  };
+};
+
+// Example Usage
+var enemy = new Enemy();
+
+// Game Loop (call these functions within your game loop)
+function update() {
+  enemy.update();
+}
+
+function render() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the canvas
+  enemy.render(ctx);
+}
+
+// Replace 'canvas' and 'ctx' with your actual canvas and context variables
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+// Your existing game loop code...
+function gameLoop() {
+  update();
+  render();
+  requestAnimationFrame(gameLoop); // Use requestAnimationFrame for smoother animations
+}
+
+// Start the game loop
+gameLoop();
+
+  </script>
+</body>
+</html>

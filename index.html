@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Racer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to bottom, #3498db, #2980b9); /* Gradient background */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background */
+            color: #3498db; /* Text color */
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #2980b9; /* Hover color */
+        }
+
+        .about-button {
+            display: block;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #3498db;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .about-button:hover {
+            background-color: #2980b9; /* Hover color */
+        }
+
+        .description {
+            margin-top: 20px;
+            text-align: center;
+            color: #fff; /* White text color */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            color: #fff; /* White header color */
+        }
+
+        h2 {
+            margin-top: 15px;
+            color: #ecf0f1; /* Light gray subheading color */
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>
+            <a href='about.html' class="about-button">About</a>
+        </li>
+        <li>
+            <a href='v1.straight.html'>Version 1 - Easy</a>
+        </li>
+        <li>
+            <a href='v2.curves.html'>Version 2 - Medium</a>
+        </li>
+        <li>
+            <a href='v3.hills.html'>Version 3 - Hard</a>
+        </li>
+        <li>
+            <a href='v5.expert.html'>Version 5 - Expert</a>
+        </li>
+        <li>
+            <a href='home.html'> Exit</a>
+            <div class="description">
+                <h1>Game Rules:</h1>
+                <h2>1. Record the fastest lap
+                    <br>2. Be fast
+                    <br>3. Use the arrow keys or W, A, D to move forward
+                    <br>4. Avoid all cars</h2>
+            </div>
+        </li>
+    </ul>
+
+</body>
+
+</html>

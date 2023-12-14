@@ -1,0 +1,29 @@
+body {
+    background: url('1.jpg') center center fixed; /* Set the background image */
+    background-size: cover; /* Cover the entire viewport */
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.start-link {
+    display: inline-block;
+    padding: 80px;
+    background-color: rgba(240, 4, 201, 0.671); /* Use rgba to set the background color with alpha (transparency) */
+    color: rgba(248, 248, 248, 0.9); /* Adjust text color with alpha (transparency) */
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(52, 152, 219, 0.1); /* Adjust box shadow with alpha (transparency) */
+    transition: background-color 0.3s ease;
+}
+
+.start-link:hover {
+    background-color: rgba(185, 41, 41, 0.7); /* Adjust hover background color with alpha (transparency) */
+}
+
